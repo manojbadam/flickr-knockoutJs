@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="knockout-3.2.0.js"></script>
+		<script type="text/javascript" src="Code.js"></script>
+		<script type="text/javascript" src="knockout.mapping-latest.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" data-semver="3.3.2" data-require="bootstrap@*" />
+ 	</head>
+	<body>
+		<div style="height:20px;">
+		</div>
+		<center>
+			<h1>Flicker Image Search</h1>
+			<div class="form-inline">
+			<div class="form-group">
+			<input type="text" id="query" class="form-control" style="width:500px;" data-bind="value: searchstring"/> &nbsp; &nbsp;
+			<button class="btn-primary btn-primary form-control" id="searchbtn">Search</button>
+			</div>
+		</div>
+		</center>
+		<div style="height:20px;">
+		</div>	
+		<ul data-bind="foreach: orders" style="list-style-type:none;">
+			<li style="float:left;margin:2px;">
+				<!-- <span data-bind="text: id"></span> -->
+				<img data-bind="attr:{src: generatedUrl}" width="250px" height="250px">
+			</li>
+		</ul>
+		<br/>
+		<!-- <span data-bind="text: ko.toJSON(orders)"></span> -->
+		
+	</body>
+</html>
